@@ -9,19 +9,16 @@ const SocialBanner = () => {
 	return (
 		<Container>
 			<Row>
-				<Col
-					className='d-flex me-auto'
-					xs='12'
-				>
-					<div className='d-flex justify-content-between'>
+				<Col xs='12'>
+					<div className='d-flex'>
 						<span>
 							<i className={addressIcon}></i> {`${street}, ${city}, ${state} ${zip} ${country}`}
 						</span>
-						<span>
+						<span className='ms-3 me-auto'>
 							<i className={emailIcon}></i> {email}
 						</span>
+						<div>meh</div>
 					</div>
-					<div></div>
 				</Col>
 			</Row>
 		</Container>
