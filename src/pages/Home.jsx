@@ -1,5 +1,16 @@
+import { Container, Row, Col } from 'reactstrap';
+import Hero from '../components/Hero';
+
 const Home = () => {
-	return <div>Home</div>;
+	return (
+		<Container>
+			<Row>
+				<Col>
+					<Hero />
+				</Col>
+			</Row>
+		</Container>
+	);
 };
 
 export default Home;

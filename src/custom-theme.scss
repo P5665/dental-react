@@ -1,0 +1,28 @@
+// Import the Bootstrap Sass files
+// @import '../node_modules/bootstrap/scss/bootstrap';
+@import '../node_modules/bootstrap/scss/functions';
+@import '../node_modules/bootstrap/scss/variables';
+
+// Override primary color
+$blue: #00aeef;
+$light-gray: #f4f4f4;
+$dark-gray: #707070;
+
+// Override gray color
+$gray: #333;
+
+// Override dark color
+$dark: #232323;
+
+$theme-colors: (
+	'gray': $gray,
+	'primary': #00aeef,
+	'dark-gray': $dark-gray,
+	'light-gray': $light-gray,
+);
+
+// Set the font-family
+$font-family-sans-serif: 'Montserrat', sans-serif;
+
+// Import the rest of the Bootstrap styles
+@import '../node_modules/bootstrap/scss/bootstrap';

@@ -1,0 +1,14 @@
+/* Generals */
+
+/* Components */
+.social-banner {
+	font-size: 12px;
+	height: 30px;
+}
+
+.main-navbar {
+	font-size: 13px;
+}
+.main-navbar nav {
+	height: 70px;
+}
