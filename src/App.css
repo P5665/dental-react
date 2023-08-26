@@ -1,14 +1,199 @@
 /* Generals */
+.display-5 {
+	font-size: 13px;
+}
+.display-6 {
+	font-size: 12px;
+}
+
+.overlay {
+	height: auto;
+	z-index: 0;
+	position: relative;
+	overflow: hidden;
+}
+
+.overlay::before {
+	content: '';
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background: #2c455d;
+	background: -webkit-linear-gradient(to right, #2c455d, #00012c);
+	background: linear-gradient(to right, #2c455d, #00012c);
+	opacity: 0.8; /* Adjust overlay opacity as needed */
+	z-index: -1;
+}
+
+.reviews::before {
+	content: '';
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	background: #2c455d;
+	background: linear-gradient(to right, rgba(44, 69, 93, 0.8), rgba(0, 1, 44, 0.8));
+	opacity: 1;
+}
+
+.footer-image-overlay {
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	width: 100%;
+	background: #2c455d;
+	background: linear-gradient(to right, rgba(44, 69, 93, 0.8), rgba(0, 1, 44, 0.8));
+	opacity: 1;
+}
+
+.section {
+	padding-top: 100px;
+	padding-bottom: 100px;
+}
+
+.section-heading {
+	font-size: 30px; /*.fs-2 */
+	margin-bottom: 15px;
+}
+
+.line {
+	width: 70px;
+	height: 4px;
+	background-color: #00aeef;
+}
 
 /* Components */
+
+/**** SocialBanner ****/
 .social-banner {
 	font-size: 12px;
 	height: 30px;
 }
 
+/**** NavBar ****/
 .main-navbar {
 	font-size: 13px;
+	/* box-shadow: 0 3px 50px rgba(0, 0, 0, 0.2); */
 }
 .main-navbar nav {
 	height: 70px;
 }
+
+/**** Hero ****/
+.hero-carousel .carousel,
+.hero-carousel .carousel-inner,
+.hero-carousel .carousel-item {
+	height: 75vh;
+}
+
+.hero-carousel .carousel-item img {
+	width: 100%; /* Make the image take up full width */
+	height: 100%; /* Make the image take up full height of the carousel item */
+	object-fit: cover; /* Ensure the image covers the entire carousel item */
+}
+
+.hero-overlay {
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	background: #2c455d;
+	background: -webkit-linear-gradient(to right, #2c455d, #00012c);
+	background: linear-gradient(to right, #2c455d, #00012c);
+	/* Adjust overlay color and opacity */
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	color: white; /* Overlay text color */
+	text-align: center;
+	opacity: 0.85;
+}
+
+/**** AboutSummary ****/
+.about-summary .elegant-icon {
+	font-size: 50px;
+	color: #00aeef;
+}
+
+/**** ServiceSummary ****/
+.services-summary {
+	background-image: url('../src/assets/bg-img/13.jpg');
+	background-size: cover;
+	background-position: center;
+}
+
+/**** PricingSummary ****/
+.pricing-table th,
+.pricing-table td {
+	margin-left: 2px;
+}
+
+/**** AppointmentForm ****/
+.appointment-form {
+	background-image: url('../src/assets/bg-img/12.jpg');
+	background-size: cover;
+	background-position: center;
+}
+
+.appointment-form .form-control {
+	width: 100%;
+	height: 50px;
+	background-color: rgba(0, 0, 0, 0.3);
+	border-radius: 2px;
+	border: none;
+	color: #ffffff;
+	font-size: 12px;
+	padding: 0 30px;
+	font-style: italic;
+}
+
+/**** Reviews ****/
+.reviews {
+	background-image: url('../src/assets/bg-img/7.jpg');
+	background-size: cover;
+	background-position: center;
+}
+
+.reviews .carousel-indicators {
+	bottom: -70px;
+}
+
+.news-summary .card-img-wrapper {
+	position: relative;
+	padding-bottom: 75%; /* 4:3 aspect ratio */
+	overflow: hidden;
+}
+
+.news-summary .card-img-wrapper img {
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+}
+
+.site-footer {
+	background-image: url('../src/assets/bg-img/3.jpg');
+	background-size: cover;
+	background-position: center;
+}
+
+.site-footer .overlay {
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	width: 100%;
+	background: #2c455d;
+	background: linear-gradient(to right, rgba(44, 69, 93, 0.8), rgba(0, 1, 44, 0.8));
+	opacity: 1;
+}
+
+/* @media (min-width: 768px) {
+	.about-summary {
+		padding-top: 100px;
+	}
+} */

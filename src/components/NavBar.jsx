@@ -14,6 +14,7 @@ function NavBar() {
 			<Navbar
 				expand='md'
 				container='sm'
+				className='bg-white'
 			>
 				<NavbarBrand href='/'>
 					<img
@@ -41,12 +42,7 @@ function NavBar() {
 							</NavItem>
 						))}
 					</Nav>
-					<Button
-						color='primary'
-						className='rounded-1 text-white'
-					>
-						Booking Now
-					</Button>
+					<Button color='primary'>Booking Now</Button>
 				</Collapse>
 			</Navbar>
 		</header>

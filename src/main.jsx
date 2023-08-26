@@ -8,6 +8,7 @@ import 'font-awesome/css/font-awesome.css';
 import 'typeface-montserrat';
 import 'typeface-open-sans';
 import './custom-theme.css';
+import './styles/css/elegant-icons.css';
 import './App.css';
 
 ReactDOM.createRoot(document.getElementById('root')).render(

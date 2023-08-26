@@ -13,6 +13,7 @@
     "bootstrap": "^5.3.1",
     "font-awesome": "^4.7.0",
     "formik": "^2.4.3",
+    "framer-motion": "^10.16.0",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-redux": "^8.1.2",
@@ -22,7 +23,8 @@
     "redux": "^4.2.1",
     "redux-logger": "^3.0.6",
     "typeface-montserrat": "^1.1.13",
-    "typeface-open-sans": "^1.1.13"
+    "typeface-open-sans": "^1.1.13",
+    "yup": "^1.2.0"
   },
   "devDependencies": {
     "@types/react": "^18.2.15",

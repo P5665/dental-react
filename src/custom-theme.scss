@@ -24,5 +24,47 @@ $theme-colors: (
 // Set the font-family
 $font-family-sans-serif: 'Montserrat', sans-serif;
 
+$h2-font-size: 1.875rem; //30px
+$h4-font-size: 1.25rem; //20px
+$h5-font-size: 1.125rem; //18px
+$h6-font-size: 1rem; //16px
+
+$font-sizes: (
+	2: $h2-font-size,
+	4: $h4-font-size,
+	5: $h5-font-size,
+	6: $h6-font-size,
+);
+
+$display-font-sizes: (
+	1: 2.623rem,
+	//42px
+	2: 2.375rem,
+	//38px
+	3: 1.375rem,
+	//22px
+	4: 0.875rem,
+	//14px
+	5: 0.8125rem,
+	//13px
+	6: 0.75rem,
+	//12px
+);
+
+// Need to adjust and dig a little deeper into why not working without !important - need to understand specificity with scss and bootstrap classes + variables
+
+$btn-font-size: 0.875rem;
+$btn-font-weight: 600;
+.btn {
+	border-radius: 0 !important;
+	text-transform: uppercase;
+	opacity: 1;
+}
+
+.btn-primary,
+.btn-outline-primary:hover {
+	color: $white !important;
+}
+
 // Import the rest of the Bootstrap styles
 @import '../node_modules/bootstrap/scss/bootstrap';

@@ -16,10 +16,10 @@ const SocialBanner = () => {
 					<Col xs='12'>
 						<div className='d-flex'>
 							<div>
-								<i className={`${addressIcon} text-primary`}></i> {`${street}, ${city}, ${state} ${zip} ${country}`}
+								<i className={`${addressIcon} text-primary`}></i> <span className='d-none d-md-inline-block '>{`${street}, ${city}, ${state} ${zip} ${country}`}</span>
 							</div>
 							<div className='ms-3 me-auto'>
-								<i className={`${emailIcon} text-primary`}></i> {email}
+								<i className={`${emailIcon} text-primary`}></i> <span className='d-none d-md-inline-block '>{email}</span>
 							</div>
 							<div className='flex'>
 								{socialMedia.map((link) => (
