@@ -19,31 +19,37 @@ const NewsSummary = () => {
 						<h2 className='section-heading text-center text-gray'>The Latest News</h2>
 						<div className='line text-center mb-5 mx-auto'></div>
 					</Col>
-					{firstArticles.map(({ firstArticle: { title, date, image, commentsCount, bodyHtml } }, index) => (
+					{firstArticles.map(({ firstArticle: { title, date, image, commentsCount, summaryText } }, index) => (
 						<Col
 							key={index}
-							sm={`6 ${firstArticles.length - 1 === index && index % 2 !== 0 ? ' offset-sm-3 ' : ' offset-sm-0'}`}
+							sm={`6 ${firstArticles.length - 1 === index && firstArticles.length % 2 !== 0 ? ' offset-sm-3 ' : ' offset-sm-0'}`}
 							md='4 offset-md-0'
 							className='d-flex align-items-stretch mb-4'
 						>
-							<Card>
+							<Card className='border-0'>
 								<div className='card-img-wrapper'>
 									<CardImg
 										top
 										alt='Sample'
 										src={image}
-										className='img-fluid '
+										className='img-fluid rounded-0'
 									/>
 								</div>
 
 								<CardBody>
 									<CardTitle className='fs-5 text-gray fw-semibold'>{title}</CardTitle>
-									<CardText className='display-4 text-dark-gray d-flex flex-column'>
+									<CardText
+										tag='div'
+										className='display-4 text-dark-gray d-flex flex-column'
+									>
 										<div
-											className='text-truncate'
-											dangerouslySetInnerHTML={{ __html: bodyHtml }}
-										></div>
-										<p className='mb-auto d-flex'>
+											className='display-4 text-dark-gray lh-lg'
+											// dangerouslySetInnerHTML={{ __html: bodyHtml }}
+										>
+											{/* Cutting summaryText to 200 characters */}
+											{summaryText.substring(0, 150)} ...
+										</div>
+										<div className='mt-3 mb-auto d-flex text-dark-gray fw-lighter'>
 											<div>
 												<i className='icon_clock_alt elegant-icon text-primary'></i> &nbsp;
 												{formatDate(date)}
@@ -52,7 +58,7 @@ const NewsSummary = () => {
 												<i className='icon_chat_alt elegant-icon text-primary'></i> &nbsp;
 												{commentsCount}
 											</div>
-										</p>
+										</div>
 									</CardText>
 								</CardBody>
 							</Card>

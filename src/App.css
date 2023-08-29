@@ -163,9 +163,14 @@
 	bottom: -70px;
 }
 
+/**** NewsSummary ****/
+.news-summary .card {
+	box-shadow: 0 0 30px 0 rgba(0, 0, 0, 0.1);
+}
+
 .news-summary .card-img-wrapper {
 	position: relative;
-	padding-bottom: 75%; /* 4:3 aspect ratio */
+	padding-bottom: 56.25%; /* 75% 4:3 aspect ratio  56.25% 16:9 */
 	overflow: hidden;
 }
 
@@ -176,6 +181,7 @@
 	object-fit: cover;
 }
 
+/**** Footer ****/
 .site-footer {
 	background-image: url('../src/assets/bg-img/3.jpg');
 	background-size: cover;

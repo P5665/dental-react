@@ -6,6 +6,12 @@ export const navLinks = [
 	{
 		id: 'about',
 		title: 'About',
+		dropdown: [
+			{
+				id: 'services',
+				title: 'Services',
+			},
+		],
 	},
 	{
 		id: 'services',
@@ -374,6 +380,8 @@ export const blogArticles = {
 				date: '2023-08-08T11:44:37',
 				image: '../src/assets/bg-img/24.jpg',
 				commentsCount: 3,
+				summaryText:
+					'Donec tempor, lorem et euismod elefend, est lectus laoreet ante, sed acusan justo diam nec tincidunt interdum ante consectetur dapibus molestie utsalism eleifend metus lacus nec neque. Donec pellentesque nisl nec ligula tempor congue. Nullam rutrum nunc and dapibus interdum. Nunc accumsan dictum mollis. Morbi ac convallis sem, a venenatis lacus. Phasellus in massa in ligula placerat tempus. Quisque id egestas odio, eget accumsan odio. Nunc vel turpis viverra quam imperdiet pellentesque. Nunc vitae sapien eu lorem convallis cursus nec lectus. Praesent cursus ornare lacus ac aliquet.',
 				bodyHtml: `<p>Donec tempor, lorem et euismod elefend, est lectus laoreet ante, sed acusan justo diam nec tincidunt interdum ante consectetur dapibus molestie utsalism eleifend metus lacus nec neque. Donec pellentesque nisl nec ligula tempor congue.
                 Nullam rutrum nunc and dapibus interdum. Nunc accumsan dictum mollis. Morbi ac convallis sem, a venenatis lacus. Phasellus in massa in ligula placerat tempus. Quisque id egestas odio, eget accumsan odio. Nunc vel turpis viverra quam
                 imperdiet pellentesque. Nunc vitae sapien eu lorem convallis cursus nec lectus. Praesent cursus ornare lacus ac aliquet.</p>
@@ -404,6 +412,8 @@ export const blogArticles = {
 				date: '2023-07-07T11:44:37',
 				image: '../src/assets/bg-img/6.jpg',
 				commentsCount: 3,
+				summaryText:
+					'Donec tempor, lorem et euismod elefend, est lectus laoreet ante, sed acusan justo diam nec tincidunt interdum ante consectetur dapibus molestie utsalism eleifend metus lacus nec neque. Donec pellentesque nisl nec ligula tempor congue. Nullam rutrum nunc and dapibus interdum. Nunc accumsan dictum mollis. Morbi ac convallis sem, a venenatis lacus. Phasellus in massa in ligula placerat tempus. Quisque id egestas odio, eget accumsan odio. Nunc vel turpis viverra quam imperdiet pellentesque. Nunc vitae sapien eu lorem convallis cursus nec lectus. Praesent cursus ornare lacus ac aliquet.',
 				bodyHtml: `<p>Donec tempor, lorem et euismod elefend, est lectus laoreet ante, sed acusan justo diam nec tincidunt interdum ante consectetur dapibus molestie utsalism eleifend metus lacus nec neque. Donec pellentesque nisl nec ligula tempor congue.
                 Nullam rutrum nunc and dapibus interdum. Nunc accumsan dictum mollis. Morbi ac convallis sem, a venenatis lacus. Phasellus in massa in ligula placerat tempus. Quisque id egestas odio, eget accumsan odio. Nunc vel turpis viverra quam
                 imperdiet pellentesque. Nunc vitae sapien eu lorem convallis cursus nec lectus. Praesent cursus ornare lacus ac aliquet.</p>
@@ -434,6 +444,8 @@ export const blogArticles = {
 				date: '2023-07-07T11:44:37',
 				image: '../src/assets/bg-img/5.jpg',
 				commentsCount: 3,
+				summaryText:
+					'Donec tempor, lorem et euismod elefend, est lectus laoreet ante, sed acusan justo diam nec tincidunt interdum ante consectetur dapibus molestie utsalism eleifend metus lacus nec neque. Donec pellentesque nisl nec ligula tempor congue. Nullam rutrum nunc and dapibus interdum. Nunc accumsan dictum mollis. Morbi ac convallis sem, a venenatis lacus. Phasellus in massa in ligula placerat tempus. Quisque id egestas odio, eget accumsan odio. Nunc vel turpis viverra quam imperdiet pellentesque. Nunc vitae sapien eu lorem convallis cursus nec lectus. Praesent cursus ornare lacus ac aliquet.',
 				bodyHtml: `<p>Donec tempor, lorem et euismod elefend, est lectus laoreet ante, sed acusan justo diam nec tincidunt interdum ante consectetur dapibus molestie utsalism eleifend metus lacus nec neque. Donec pellentesque nisl nec ligula tempor congue.
                 Nullam rutrum nunc and dapibus interdum. Nunc accumsan dictum mollis. Morbi ac convallis sem, a venenatis lacus. Phasellus in massa in ligula placerat tempus. Quisque id egestas odio, eget accumsan odio. Nunc vel turpis viverra quam
                 imperdiet pellentesque. Nunc vitae sapien eu lorem convallis cursus nec lectus. Praesent cursus ornare lacus ac aliquet.</p>

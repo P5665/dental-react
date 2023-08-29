@@ -13,8 +13,8 @@ function NavBar() {
 		<header className='main-navbar sticky-top'>
 			<Navbar
 				expand='md'
+				color='white'
 				container='sm'
-				className='bg-white'
 			>
 				<NavbarBrand href='/'>
 					<img
