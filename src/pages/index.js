@@ -1,0 +1,12 @@
+export { default as About } from './About';
+export { default as Advisors } from './Advisors';
+export { default as Blog } from './Blog';
+export { default as Careers } from './Careers';
+export { default as Contact } from './Contact';
+export { default as FAQ } from './FAQ';
+export { default as Home } from './Home';
+export { default as Legal } from './Legal';
+export { default as Policy } from './Policy';
+export { default as Pricing } from './Pricing';
+export { default as Services } from './Services';
+export { default as Dentists } from './Dentists';
