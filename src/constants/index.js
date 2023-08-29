@@ -8,8 +8,8 @@ export const navLinks = [
 		title: 'About',
 	},
 	{
-		id: 'service',
-		title: 'Service',
+		id: 'services',
+		title: 'Services',
 	},
 	{
 		id: 'pricing',
@@ -498,8 +498,8 @@ export const footerLinks = {
 			title: 'About',
 		},
 		{
-			id: 'faqs',
-			title: 'FAQs',
+			id: 'faq',
+			title: 'FAQ',
 		},
 		{
 			id: 'contact',
@@ -507,11 +507,11 @@ export const footerLinks = {
 		},
 		{
 			id: 'policy',
-			title: 'policy',
+			title: 'Policy',
 		},
 		{
-			id: 'news',
-			title: 'News',
+			id: 'blog',
+			title: 'Blog',
 		},
 		{
 			id: 'advisors',
@@ -522,16 +522,16 @@ export const footerLinks = {
 			title: 'Careers',
 		},
 		{
-			id: 'dentist',
-			title: 'Dentist',
+			id: 'dentists',
+			title: 'Dentists',
 		},
 		{
 			id: 'services',
 			title: 'Services',
 		},
 		{
-			id: 'legals',
-			title: 'Legals',
+			id: 'legal',
+			title: 'Legal',
 		},
 	],
 };

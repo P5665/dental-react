@@ -1,6 +1,7 @@
 import { Container, Row, Col } from 'reactstrap';
 import { footerLinks, contactInfo, socialMedia } from '../constants';
 import DentoLogo from '../assets/core-img/logo.png';
+import { Link } from 'react-router-dom';
 
 const Footer = () => {
 	const { contactText, openingHours, quickLinks } = footerLinks;
@@ -73,7 +74,12 @@ const Footer = () => {
 									key={index}
 									className='mb-3'
 								>
-									{link.title}
+									<Link
+										className='text-white text-decoration-none'
+										to={`/${link.id}`}
+									>
+										{link.title}
+									</Link>
 								</Col>
 							))}
 						</Row>
