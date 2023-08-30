@@ -1,6 +1,6 @@
 export const navLinks = [
 	{
-		id: '',
+		id: '/',
 		title: 'Home',
 	},
 	{
@@ -11,16 +11,31 @@ export const navLinks = [
 				id: 'services',
 				title: 'Services',
 			},
+			{
+				id: 'pricing',
+				title: 'Pricing',
+			},
+			{
+				id: 'dentists',
+				title: 'Dentists',
+				dropdown: [
+					{
+						id: 'bobby-clarke',
+						title: 'Bobby Clark',
+					},
+					{
+						id: 'wayne-gretzky',
+						title: 'Wayne Gretzky',
+					},
+					{
+						id: 'bobbi-hull',
+						title: 'Bobbi Hull',
+					},
+				],
+			},
 		],
 	},
-	{
-		id: 'services',
-		title: 'Services',
-	},
-	{
-		id: 'pricing',
-		title: 'Pricing',
-	},
+
 	{
 		id: 'blog',
 		title: 'Blog',
