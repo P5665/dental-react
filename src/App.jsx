@@ -3,7 +3,7 @@ import { Routes, Route } from 'react-router-dom';
 import NavBar from './components/NavBar';
 import SocialBanner from './components/SocialBanner';
 import Footer from './components/Footer';
-import { Home, About, Pricing, Blog, Contact, Services, Advisors, FAQ, Legal, Policy, Careers, Dentists } from './pages';
+import { Home, About, Pricing, Blog, Contact, Services, Advisors, FAQ, Legal, Policy, Careers, Dentists, DentalTechnology } from './pages';
 
 function App() {
 	return (
@@ -20,8 +20,20 @@ function App() {
 					element={<About />}
 				></Route>
 				<Route
+					path='/services'
+					element={<Services />}
+				></Route>
+				<Route
 					path='/pricing'
 					element={<Pricing />}
+				></Route>
+				<Route
+					path='/dentists'
+					element={<Dentists />}
+				></Route>
+				<Route
+					path='/dental-technology'
+					element={<DentalTechnology />}
 				></Route>
 				<Route
 					path='/blog'
@@ -31,10 +43,7 @@ function App() {
 					path='/contact'
 					element={<Contact />}
 				></Route>
-				<Route
-					path='/services'
-					element={<Services />}
-				></Route>
+
 				<Route
 					path='/policy'
 					element={<Policy />}

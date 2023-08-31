@@ -10,3 +10,4 @@ export { default as Policy } from './Policy';
 export { default as Pricing } from './Pricing';
 export { default as Services } from './Services';
 export { default as Dentists } from './Dentists';
+export { default as DentalTechnology } from './DentalTechnology';
