@@ -12,15 +12,15 @@ export const navLinks = [
 				title: 'Services',
 				dropdown: [
 					{
-						id: 'services/general',
+						id: 'general',
 						title: 'General',
 					},
 					{
-						id: 'services/cosmetic',
+						id: 'cosmetic',
 						title: 'Cosmetic',
 					},
 					{
-						id: 'services/surgical',
+						id: 'surgical',
 						title: 'Surgical',
 					},
 				],
@@ -34,19 +34,19 @@ export const navLinks = [
 				title: 'Dentists',
 				dropdown: [
 					{
-						id: 'dentists',
+						id: '',
 						title: 'Meet the Team',
 					},
 					{
-						id: 'dentists/bobby-clarke',
+						id: 'bobby-clarke',
 						title: 'Bobby Clark',
 					},
 					{
-						id: 'dentists/wayne-gretzky',
+						id: 'wayne-gretzky',
 						title: 'Wayne Gretzky',
 					},
 					{
-						id: 'dentists/bobbi-hull',
+						id: 'bobbi-hull',
 						title: 'Bobbi Hull',
 					},
 				],

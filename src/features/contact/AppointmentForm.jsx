@@ -10,7 +10,7 @@ const AppointmentForm = () => {
 						<h2 className='section-heading text-white text-center'>Book An Appointment</h2>
 						<div className='line mb-5 mx-auto'></div>
 						<Formik>
-							<Form>
+							<Form id='book-appointment-form'>
 								<Row>
 									<Col md='6'>
 										<FormGroup floating>

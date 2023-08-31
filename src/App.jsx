@@ -1,11 +1,19 @@
-import { useState } from 'react';
 import { Routes, Route } from 'react-router-dom';
+import { useEffect } from 'react';
+import { useDispatch } from 'react-redux';
 import NavBar from './components/NavBar';
 import SocialBanner from './components/SocialBanner';
 import Footer from './components/Footer';
 import { Home, About, Pricing, Blog, Contact, Services, Advisors, FAQ, Legal, Policy, Careers, Dentists, DentalTechnology } from './pages';
+import { fetchServices } from './features/services/servicesSlice';
 
 function App() {
+	const dispatch = useDispatch();
+
+	useEffect(() => {
+		dispatch(fetchServices());
+	}, [dispatch]);
+
 	return (
 		<>
 			<SocialBanner />
@@ -21,6 +29,10 @@ function App() {
 				></Route>
 				<Route
 					path='/services'
+					element={<Services />}
+				></Route>
+				<Route
+					path='/services/:category'
 					element={<Services />}
 				></Route>
 				<Route

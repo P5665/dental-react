@@ -74,7 +74,7 @@ function NavBar() {
 														>
 															<NavLink
 																className={`${active === subLink.id ? 'bg-primary text-white' : 'text-dark'} nav-link fw-semibold `}
-																to={subLink.id}
+																to={`${dropdownLink.id}/${subLink.id}`}
 																onClick={() => setActive(subLink.id)}
 															>
 																{subLink.title}

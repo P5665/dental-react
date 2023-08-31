@@ -1,5 +1,6 @@
 import SubHeader from '../components/SubHeader';
 import subHeaderImage from '../assets/bg-img/12.jpg';
+import ServicesList from '../features/services/ServicesList';
 
 const Services = () => {
 	return (
@@ -8,7 +9,7 @@ const Services = () => {
 				current='Services'
 				image={subHeaderImage}
 			/>
-			<h1>Services</h1>
+			<ServicesList />
 		</>
 	);
 };
