@@ -74,6 +74,16 @@
 }
 
 /**** NavBar ****/
+.navbar-nav .nav-link:active {
+	color: white;
+}
+
+.dropdown-item.active,
+.dropdown-item:active {
+	background-color: #00afea;
+	color: white;
+}
+
 .main-navbar {
 	font-size: 13px;
 	/* box-shadow: 0 3px 50px rgba(0, 0, 0, 0.2); */

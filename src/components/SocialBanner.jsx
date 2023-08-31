@@ -10,7 +10,7 @@ const SocialBanner = () => {
 	// font-size:14px
 
 	return (
-		<div className='social-banner bg-light text-secondary d-flex align-items-center'>
+		<div className='social-banner bg-light-gray text-secondary d-flex align-items-center'>
 			<Container>
 				<Row>
 					<Col xs='12'>
