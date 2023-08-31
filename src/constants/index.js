@@ -20,15 +20,15 @@ export const navLinks = [
 				title: 'Dentists',
 				dropdown: [
 					{
-						id: 'bobby-clarke',
+						id: 'dentists/bobby-clarke',
 						title: 'Bobby Clark',
 					},
 					{
-						id: 'wayne-gretzky',
+						id: 'dentists/wayne-gretzky',
 						title: 'Wayne Gretzky',
 					},
 					{
-						id: 'bobbi-hull',
+						id: 'dentists/bobbi-hull',
 						title: 'Bobbi Hull',
 					},
 				],

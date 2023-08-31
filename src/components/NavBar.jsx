@@ -11,109 +11,113 @@ function NavBar() {
 	const toggle = () => setIsOpen(!isOpen);
 	// TODO probably want to break down the NavItem and the DropDown into their own components and pass list of links --Would only ever do 2 deep dropdown1-->dropdown2.  Need to clean up mobile nav and might make hover show dropdowns vs clicks
 	return (
-		<header className='main-navbar sticky-top'>
-			<Navbar
-				expand='md'
-				color='white'
-				container='sm'
+		<Navbar
+			color='white'
+			light
+			expand='md'
+			container='sm'
+			className='main-navbar sticky-top'
+		>
+			<NavbarBrand href='/'>
+				<img
+					src={DentoLogo}
+					alt='logo'
+				/>
+			</NavbarBrand>
+			<NavbarToggler onClick={toggle} />
+			<Collapse
+				isOpen={isOpen}
+				navbar
 			>
-				<NavbarBrand href='/'>
-					<img
-						src={DentoLogo}
-						alt='logo'
-					/>
-				</NavbarBrand>
-				<NavbarToggler onClick={toggle} />
-				<Collapse
-					isOpen={isOpen}
+				<Nav
+					className='me-auto'
 					navbar
 				>
-					<Nav
-						className='me-auto'
-						navbar
-					>
-						{navLinks.map((link, index) =>
-							link.dropdown ? (
-								// First layer Drop Down
-								<UncontrolledDropdown
+					{navLinks.map((link, index) =>
+						link.dropdown ? (
+							// First layer Drop Down
+							<UncontrolledDropdown
+								nav
+								inNavbar
+								key={index}
+							>
+								<DropdownToggle
 									nav
-									inNavbar
-									key={index}
+									caret
+									className='text-dark fw-semibold'
 								>
-									<DropdownToggle
-										nav
-										caret
-										className='text-dark fw-semibold'
-									>
-										{link.title}
-									</DropdownToggle>
-									<DropdownMenu end>
-										{link.dropdown.map((dropdownLink, index) =>
-											dropdownLink.dropdown ? (
-												<UncontrolledDropdown
+									{link.title}
+								</DropdownToggle>
+								<DropdownMenu end>
+									{link.dropdown.map((dropdownLink, index) =>
+										dropdownLink.dropdown ? (
+											// Second/Nested Dropdown
+											<UncontrolledDropdown
+												nav
+												inNavbar
+												key={index}
+												className='dropdown-item nav-link'
+											>
+												<DropdownToggle
 													nav
-													inNavbar
-													key={index}
+													caret
+													className='text-dark fw-semibold'
 												>
-													<DropdownToggle
-														nav
-														caret
-														className='text-dark fw-semibold'
-													>
-														{dropdownLink.title}
-													</DropdownToggle>
-													<DropdownMenu end>
-														{dropdownLink.dropdown.map((subdropdownLink, index) => (
-															<DropdownItem
-																key={index}
-																className={`${active === subdropdownLink.id ? 'bg-primary text-white' : ''} nav-link fw-semibold `}
+													{dropdownLink.title}
+												</DropdownToggle>
+												<DropdownMenu end>
+													{dropdownLink.dropdown.map((subLink) => (
+														<DropdownItem
+															tag={'button'}
+															key={subLink.id}
+															className={`${active === subLink.id ? 'bg-primary text-white' : 'text-dark'} fw-semibold `}
+														>
+															<NavLink
+																className={`${active === subLink.id ? 'bg-primary text-white' : 'text-dark'} nav-link fw-semibold `}
+																to={subLink.id}
+																onClick={() => setActive(subLink.id)}
 															>
-																<NavLink
-																	className={`${active === subdropdownLink.id ? 'bg-primary text-white' : ''} nav-link fw-semibold `}
-																	to={subdropdownLink.id}
-																	onClick={() => setActive(subdropdownLink.id)}
-																>
-																	{subdropdownLink.title}
-																</NavLink>
-															</DropdownItem>
-														))}
-													</DropdownMenu>
-												</UncontrolledDropdown>
-											) : (
-												<DropdownItem
-													key={index}
-													className={`${active === dropdownLink.id ? 'bg-primary text-white' : ''} nav-link fw-semibold `}
+																{subLink.title}
+															</NavLink>
+														</DropdownItem>
+													))}
+												</DropdownMenu>
+											</UncontrolledDropdown>
+										) : (
+											// First dropdown layer - not nested
+											<DropdownItem
+												key={index}
+												className={`${active === dropdownLink.id ? 'bg-primary text-white' : ''} nav-link fw-semibold`}
+											>
+												<NavLink
+													className={`${active === dropdownLink.id ? 'bg-primary text-white' : ''} nav-link fw-semibold text-dark`}
+													to={dropdownLink.id}
+													onClick={() => setActive(dropdownLink.id)}
 												>
-													<NavLink
-														className={`${active === dropdownLink.id ? 'bg-primary text-white' : ''} nav-link fw-semibold `}
-														to={dropdownLink.id}
-														onClick={() => setActive(dropdownLink.id)}
-													>
-														{dropdownLink.title}
-													</NavLink>
-												</DropdownItem>
-											)
-										)}
-									</DropdownMenu>
-								</UncontrolledDropdown>
-							) : (
-								// Normal top Level Nav
-								<NavItem key={link.id}>
-									<NavLink
-										to={link.id}
-										className={`${active === link.id ? 'border-bottom border-primary border-3' : ''} nav-link text-dark fw-semibold`}
-										onClick={() => setActive(link.id)}
-									>
-										{link.title}
-									</NavLink>
-								</NavItem>
-							)
-						)}
-					</Nav>
-					<Button color='primary'>Booking Now</Button>
-				</Collapse>
-			</Navbar>
-		</header>
+													{dropdownLink.title}
+												</NavLink>
+											</DropdownItem>
+										)
+									)}
+								</DropdownMenu>
+							</UncontrolledDropdown>
+						) : (
+							// Normal top Level Nav
+							<NavItem key={link.id}>
+								<NavLink
+									to={link.id}
+									className={`${active === link.id ? 'border-bottom border-primary border-3' : ''} nav-link text-dark fw-semibold`}
+									onClick={() => setActive(link.id)}
+								>
+									{link.title}
+								</NavLink>
+							</NavItem>
+						)
+					)}
+				</Nav>
+				<Button color='primary'>Booking Now</Button>
+			</Collapse>
+		</Navbar>
 	);
 }
 
