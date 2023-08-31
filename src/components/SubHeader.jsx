@@ -6,6 +6,10 @@ const SubHeader = ({ current, detail, image }) => {
 		backgroundImage: `url(..${image})`,
 	};
 
+	const pathname = location.pathname;
+	const pathSegments = pathname.split('/');
+	console.log('🚀 ~ file: SubHeader.jsx:11 ~ SubHeader ~ pathSegments:', pathSegments);
+
 	return (
 		<>
 			<section
@@ -41,12 +45,18 @@ const SubHeader = ({ current, detail, image }) => {
 										<Link to='/directory'>Directory</Link>
 									</BreadcrumbItem>
 								)}
-								<BreadcrumbItem
-									className='text-dark-gray'
-									active
-								>
-									{current}
-								</BreadcrumbItem>
+								{pathSegments.map(
+									(path, index) =>
+										index > 0 && (
+											<BreadcrumbItem
+												key={index}
+												className='text-dark-gray text-capitalize'
+												active
+											>
+												{path}
+											</BreadcrumbItem>
+										)
+								)}
 							</Breadcrumb>
 						</Col>
 					</Row>
