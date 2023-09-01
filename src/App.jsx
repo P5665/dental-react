@@ -5,13 +5,17 @@ import NavBar from './components/NavBar';
 import SocialBanner from './components/SocialBanner';
 import Footer from './components/Footer';
 import { Home, About, Pricing, Blog, Contact, Services, Advisors, FAQ, Legal, Policy, Careers, Dentists, DentalTechnology } from './pages';
+import DentistProfile from './features/dentists/DentistProfile';
+import ServicesList from './features/services/ServicesList';
 import { fetchServices } from './features/services/servicesSlice';
+import { fetchDentists } from './features/dentists/dentistsSlice';
 
 function App() {
 	const dispatch = useDispatch();
 
 	useEffect(() => {
 		dispatch(fetchServices());
+		dispatch(fetchDentists());
 	}, [dispatch]);
 
 	return (
@@ -33,7 +37,7 @@ function App() {
 				></Route>
 				<Route
 					path='/services/:category'
-					element={<Services />}
+					element={<ServicesList />}
 				></Route>
 				<Route
 					path='/pricing'
@@ -42,6 +46,10 @@ function App() {
 				<Route
 					path='/dentists'
 					element={<Dentists />}
+				></Route>
+				<Route
+					path='/dentists/:name'
+					element={<DentistProfile />}
 				></Route>
 				<Route
 					path='/dental-technology'

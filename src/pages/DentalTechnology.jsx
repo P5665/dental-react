@@ -5,10 +5,10 @@ const DentalTechnology = () => {
 	return (
 		<>
 			<SubHeader
-				current='DentalTechnology'
+				current='Dental Technology'
 				image={subHeaderImage}
 			/>
-			<h1>DentalTechnology</h1>
+			<h1>Dental Technology</h1>
 		</>
 	);
 };

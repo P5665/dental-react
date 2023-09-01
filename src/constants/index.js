@@ -35,7 +35,7 @@ export const navLinks = [
 				dropdown: [
 					{
 						id: '',
-						title: 'Meet the Team',
+						title: 'Meet our Team',
 					},
 					{
 						id: 'bobby-clarke',
@@ -194,88 +194,88 @@ export const aboutSummary = {
 	],
 };
 
-export const services = {
-	services: {
-		general: [
-			{
-				id: 0,
-				service: 'Cleaning and Exams',
-				image: '../src/assets/bg-img/15.jpg',
-				header: 'Routine care for all',
-				description: 'We make getting your teeth cleaned at Dentos convenient and, dare we say, a relief to those with dental anxiety. Visit us every 6 months for a 60-minute visit that includes:',
-				inclusions: ['Gentle and thorough dental cleaning with your hygienist', '3D x-rays (once a year)', 'Dental exam with your dentist', 'Free take home teeth whitening'],
-			},
-			{
-				id: 1,
-				service: 'Emergency Care',
-				image: '../src/assets/bg-img/15.jpg',
-				header: 'Feel better now',
-				description: 'Looking for an emergency dentist? Dentos offers same-day emergency dental care for current and new patients alike. We help with:',
-				inclusions: ['Toothaches', 'Broken or chipped teeth', 'Broken crowns and fillings', 'Abscesses or swelling', 'Knocked-out teeth', 'Anything that doesn’t feel right in your mouth!'],
-			},
-			{
-				id: 3,
-				service: 'Crowns',
-				image: '../src/assets/bg-img/15.jpg',
-				header: 'Treated like royalty with our quality crowns',
-				description: 'A ceramic dental crown protects weak, damaged teeth so they can continue functioning (and shining brightly) for years to come. There are a few situations where our dentists might recommend a dental crown:',
-				inclusions: ['Restore badly worn teeth', 'Broken teeth', 'Repair a large cavity', 'Restore your tooth after a root canal', 'The final step of an implant'],
-			},
-			{
-				id: 4,
-				service: 'Family Dentistry',
-				image: '../src/assets/bg-img/15.jpg',
-				header: 'We put loved ones first',
-				description: 'Any kind of medical treatment for your loved ones can feel stressful. That’s why our family dental group at Village Dental makes our patients’ comfort, convenience, and ease our top priority. Best of all, we can treat the entire family at one appointment — say goodbye to multiple trips to the dentist just to get the whole family’s teeth cleaned!',
-				inclusions: ['General Dentistry – preventative care, tooth repair, emergency care', 'Cosmetic Dentistry – Invisalign, teeth whitening, veneers', 'Surgical Dentistry – extractions, root canals, implants, bone grafts'],
-			},
-		],
-		cosmetic: [
-			{
-				id: 1,
-				service: 'Invisalign',
-				image: '../src/assets/bg-img/15.jpg',
-				header: 'Straighten Up',
-				description: 'Invisalign is an easy and efficient way for adults and teens alike to straighten their teeth. ',
-				inclusions: ['Invisalign uses clear acrylic aligners that are discreet and comfortable.', 'Wear your retainers for 23 hours a day, pop them out while eating and brushing.', 'Invisalign straightens misaligned teeth without unsightly, sharp metal braces.', 'Most treatments take 6 months to 2 years depending on the complexity of the case.'],
-			},
-			{
-				id: 2,
-				service: 'Vaneers',
-				image: '../src/assets/bg-img/15.jpg',
-				header: 'Level Up',
-				description: 'Improve the appearance of your teeth and smile with veneers. Usually made of porcelain or resin, veneers are thin, custom-made shells that fit around your teeth. This treatment completely transforms the shape, color, length, or size of your teeth.',
-				inclusions: ['Corrects gaps, chips, stains, and worn teeth.', 'Also effective for improving just one tooth.', 'Natural-looking and customized for a flawless smile.', 'quick fix orthodontic treatment.'],
-			},
-			{
-				id: 3,
-				service: 'Teeth Whitening',
-				image: '../src/assets/bg-img/15.jpg',
-				header: 'Get your own bling bling smile',
-				description: 'Goodbye, yellow teeth. Age, tobacco, tea, coffee, wine, and soda can wreak havoc on your teeth’s naturally white color. Unfortunately, stained teeth can make you look and feel older and less confident. We offer powerful professional teeth whitening treatments to help you shine your brightest.',
-				inclusions: ['Remove surface stains from your teeth', 'Brighten your smile without causing sensitivity', 'Create a natural, confident smile'],
-			},
-		],
-		surgical: [
-			{
-				id: 1,
-				service: 'Implants',
-				image: '../src/assets/bg-img/15.jpg',
-				header: 'Fake it till you make it',
-				description: 'We make the dental implant process the easiest experience possible. You’ll be grinning, speaking, and chewing happily in no time.  A smile that lasts.',
-				inclusions: ['In person consultation', '3D imaging to ensure proper placement', 'Placement - The implant is placed in one simple, comfortable visit'],
-			},
-			{
-				id: 2,
-				service: 'Root Canals',
-				image: '../src/assets/bg-img/15.jpg',
-				header: 'Down to the roots',
-				description: 'We make the dental implant process the easiest experience possible. You’ll be grinning, speaking, and chewing happily in no time.  A smile that lasts.',
-				inclusions: ['3D Imaging & Diagnosis', 'Remove the Infection', 'Restore the Tooth'],
-			},
-		],
-	},
-};
+// export const services = {
+// 	services: {
+// 		general: [
+// 			{
+// 				id: 0,
+// 				service: 'Cleaning and Exams',
+// 				image: '../src/assets/bg-img/15.jpg',
+// 				header: 'Routine care for all',
+// 				description: 'We make getting your teeth cleaned at Dentos convenient and, dare we say, a relief to those with dental anxiety. Visit us every 6 months for a 60-minute visit that includes:',
+// 				inclusions: ['Gentle and thorough dental cleaning with your hygienist', '3D x-rays (once a year)', 'Dental exam with your dentist', 'Free take home teeth whitening'],
+// 			},
+// 			{
+// 				id: 1,
+// 				service: 'Emergency Care',
+// 				image: '../src/assets/bg-img/15.jpg',
+// 				header: 'Feel better now',
+// 				description: 'Looking for an emergency dentist? Dentos offers same-day emergency dental care for current and new patients alike. We help with:',
+// 				inclusions: ['Toothaches', 'Broken or chipped teeth', 'Broken crowns and fillings', 'Abscesses or swelling', 'Knocked-out teeth', 'Anything that doesn’t feel right in your mouth!'],
+// 			},
+// 			{
+// 				id: 3,
+// 				service: 'Crowns',
+// 				image: '../src/assets/bg-img/15.jpg',
+// 				header: 'Treated like royalty with our quality crowns',
+// 				description: 'A ceramic dental crown protects weak, damaged teeth so they can continue functioning (and shining brightly) for years to come. There are a few situations where our dentists might recommend a dental crown:',
+// 				inclusions: ['Restore badly worn teeth', 'Broken teeth', 'Repair a large cavity', 'Restore your tooth after a root canal', 'The final step of an implant'],
+// 			},
+// 			{
+// 				id: 4,
+// 				service: 'Family Dentistry',
+// 				image: '../src/assets/bg-img/15.jpg',
+// 				header: 'We put loved ones first',
+// 				description: 'Any kind of medical treatment for your loved ones can feel stressful. That’s why our family dental group at Village Dental makes our patients’ comfort, convenience, and ease our top priority. Best of all, we can treat the entire family at one appointment — say goodbye to multiple trips to the dentist just to get the whole family’s teeth cleaned!',
+// 				inclusions: ['General Dentistry – preventative care, tooth repair, emergency care', 'Cosmetic Dentistry – Invisalign, teeth whitening, veneers', 'Surgical Dentistry – extractions, root canals, implants, bone grafts'],
+// 			},
+// 		],
+// 		cosmetic: [
+// 			{
+// 				id: 1,
+// 				service: 'Invisalign',
+// 				image: '../src/assets/bg-img/15.jpg',
+// 				header: 'Straighten Up',
+// 				description: 'Invisalign is an easy and efficient way for adults and teens alike to straighten their teeth. ',
+// 				inclusions: ['Invisalign uses clear acrylic aligners that are discreet and comfortable.', 'Wear your retainers for 23 hours a day, pop them out while eating and brushing.', 'Invisalign straightens misaligned teeth without unsightly, sharp metal braces.', 'Most treatments take 6 months to 2 years depending on the complexity of the case.'],
+// 			},
+// 			{
+// 				id: 2,
+// 				service: 'Vaneers',
+// 				image: '../src/assets/bg-img/15.jpg',
+// 				header: 'Level Up',
+// 				description: 'Improve the appearance of your teeth and smile with veneers. Usually made of porcelain or resin, veneers are thin, custom-made shells that fit around your teeth. This treatment completely transforms the shape, color, length, or size of your teeth.',
+// 				inclusions: ['Corrects gaps, chips, stains, and worn teeth.', 'Also effective for improving just one tooth.', 'Natural-looking and customized for a flawless smile.', 'quick fix orthodontic treatment.'],
+// 			},
+// 			{
+// 				id: 3,
+// 				service: 'Teeth Whitening',
+// 				image: '../src/assets/bg-img/15.jpg',
+// 				header: 'Get your own bling bling smile',
+// 				description: 'Goodbye, yellow teeth. Age, tobacco, tea, coffee, wine, and soda can wreak havoc on your teeth’s naturally white color. Unfortunately, stained teeth can make you look and feel older and less confident. We offer powerful professional teeth whitening treatments to help you shine your brightest.',
+// 				inclusions: ['Remove surface stains from your teeth', 'Brighten your smile without causing sensitivity', 'Create a natural, confident smile'],
+// 			},
+// 		],
+// 		surgical: [
+// 			{
+// 				id: 1,
+// 				service: 'Implants',
+// 				image: '../src/assets/bg-img/15.jpg',
+// 				header: 'Fake it till you make it',
+// 				description: 'We make the dental implant process the easiest experience possible. You’ll be grinning, speaking, and chewing happily in no time.  A smile that lasts.',
+// 				inclusions: ['In person consultation', '3D imaging to ensure proper placement', 'Placement - The implant is placed in one simple, comfortable visit'],
+// 			},
+// 			{
+// 				id: 2,
+// 				service: 'Root Canals',
+// 				image: '../src/assets/bg-img/15.jpg',
+// 				header: 'Down to the roots',
+// 				description: 'We make the dental implant process the easiest experience possible. You’ll be grinning, speaking, and chewing happily in no time.  A smile that lasts.',
+// 				inclusions: ['3D Imaging & Diagnosis', 'Remove the Infection', 'Restore the Tooth'],
+// 			},
+// 		],
+// 	},
+// };
 
 export const serviceSummary = {
 	bgImg: '../src/assets/bg-img/11.jpg',
@@ -450,20 +450,47 @@ export const dentistList = [
 	{
 		id: 1,
 		name: 'Bobby Clarke',
+		title: 'Dr.',
+		nickname: 'Tooth Trouncer',
+		intro: 'Meet Bobby Clarke: From Hockey Pucks to Dental Plucks!',
+		specialty: 'Dental MVP, Oral Hygiene Power Plays',
 		image: '../src/assets/bg-img/9.png',
 		expertise: 'Surgical Expert',
+		bio: "Once a fierce competitor on the ice, Bobby Clarke traded his hockey stick for a dental mirror, but he's still in the game, just on a different kind of rink—the dental clinic! With a grin as charming as his slapshot, Dr. Clarke is here to ensure your teeth get the same level of precision care he used to show those hockey pucks.",
+		education: ['Ice Rinks: Where he honed his quick reflexes.', 'School of Dentistry: Where he learned that teeth are tougher than puck boards.'],
+		catchphrase: "Your teeth may not be as tough as hockey pucks, but with Dr. Clarke's care, they'll be unstoppable!",
+		services: ['Tooth Hockey: A unique approach to dental care, where every tooth is treated like a goal to protect.', "Championship Smiles: Get a smile that's as bright as a Zamboni's headlights.", "Dental Power Plays: Dr. Clarke's signature treatment to restore teeth to their championship form.", 'Mouthguard Fittings: Because even your teeth need defense against unexpected hits.'],
+		fun: ['Dental Cup: Dr. Clarke\'s dental practice holds an annual "Dental Cup" hockey match.', 'Hockey Memorabilia: His clinic is adorned with signed toothbrushes, hockey sticks, and photos with celebrity smiles.'],
 	},
 	{
 		id: 2,
 		name: 'Wayne Gretzky',
+		title: 'Dr.',
+		nickname: 'Smile Sniper',
+		intro: 'Wayne Gretzky: Scoring Goals and Smiles!',
+		specialty: 'Dental Goals, Oral Health MVP',
 		image: '../src/assets/bg-img/10.png',
 		expertise: 'Great One',
+		bio: "From the ice rink to the dental chair, Wayne Gretzky continues to make strides in delivering top-notch performance. While he may have retired his hockey skates, he's still in the business of scoring big—this time, in the world of dental care!",
+		education: ['Hockey Arenas: Where he perfected precision.', 'Dental School: Where he learned to give teeth the same attention as he gave to scoring goals.'],
+		catchphrase: "Just like on the ice, excellence is the goal—let's score the perfect smile together!",
+		services: ['Smile Slapshots: Precision treatments to ensure your smile is always top shelf.', 'Mouthguard Mastery: Get your teeth game-ready with custom-made mouthguards.', "Dental Hat Tricks: Dr. Gretzky's signature approach to restoring teeth to their prime.", 'Championship Whitening: Achieve a winning smile that shines brighter than the arena lights.'],
+		fun: ['Golden Dental Tools: Dr. Gretzky uses dental tools made of recycled hockey sticks.', 'Celebrity Smiles: His clientele includes fellow athletes, celebrities, and fans looking for a winning smile.'],
 	},
 	{
 		id: 3,
 		name: 'Bobbi Hull',
+		title: 'Dr.',
+		nickname: 'Tooth Tiger',
+		intro: 'Bobbi Hull: Slapshot Smiles and Dental Power Plays!',
+		specialty: 'Dental Artistry, Oral Health Dynamo',
 		image: '../src/assets/bg-img/11.png',
 		expertise: 'Pediatric & Family Expert',
+		bio: "From the ice to the dental chair, Bobbi Hull's legendary precision now brings winning smiles to the forefront. After ruling the hockey rink, she's mastered the art of crafting picture-perfect smiles that deserve their own trophy!",
+		education: ['Hockey Arenas: Where she honed her focus and accuracy.', 'Dental Academy: Where she learned to create masterpieces in the form of smiles.'],
+		catchphrase: "Just like on the ice, every detail counts—let's create a smile that's a true work of art!",
+		services: ["Smile Slapshots: Bobbi's signature technique to create smiles that light up the room.", 'Dental Masterstrokes: Craftsmanship that turns dental procedures into works of art.', 'Tooth Restoration Magic: Transforming damaged teeth into stunning creations.', 'Champion Whitening: Achieve a bright, winning smile worthy of the Hall of Fame.'],
+		fun: ["Brushing Power: Bobbi's brushing technique is rumored to be as powerful as her slapshot.", 'Hockey-Dental Fusion: She once fixed a tooth while discussing hockey strategies with a patient.', 'Dental Fan Club: Her patients often refer to themselves as the "Tooth Tigers."'],
 	},
 ];
 

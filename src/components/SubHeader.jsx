@@ -8,8 +8,6 @@ const SubHeader = ({ current, detail, image }) => {
 
 	const pathname = location.pathname;
 	const pathSegments = pathname.split('/');
-	console.log('🚀 ~ file: SubHeader.jsx:11 ~ SubHeader ~ pathSegments:', pathSegments);
-
 	return (
 		<>
 			<section
@@ -53,7 +51,7 @@ const SubHeader = ({ current, detail, image }) => {
 												className='text-dark-gray text-capitalize'
 												active
 											>
-												{path}
+												{path.replace(/-/, ' ')}
 											</BreadcrumbItem>
 										)
 								)}
