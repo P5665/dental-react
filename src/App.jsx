@@ -9,6 +9,7 @@ import DentistProfile from './features/dentists/DentistProfile';
 import ServicesList from './features/services/ServicesList';
 import { fetchServices } from './features/services/servicesSlice';
 import { fetchDentists } from './features/dentists/dentistsSlice';
+import { fetchLegal } from './features/legal/legalSlice';
 
 function App() {
 	const dispatch = useDispatch();
@@ -16,6 +17,7 @@ function App() {
 	useEffect(() => {
 		dispatch(fetchServices());
 		dispatch(fetchDentists());
+		dispatch(fetchLegal());
 	}, [dispatch]);
 
 	return (

@@ -8,10 +8,8 @@ import { Link } from 'react-router-dom';
 
 const DentistProfile = () => {
 	const { name } = useParams();
-	console.log('🚀 ~ file: DentistProfile.jsx:10 ~ DentistProfile ~ name:', name);
 	const dentist = useSelector(selectDentistByName(name));
 	const { title, name: dentistName, nickname, intro, specialty, image, bio, education, catchphrase, services, fun } = dentist;
-	console.log('🚀 ~ file: DentistProfile.jsx:11 ~ DentistProfile ~ dentist:', dentist);
 	return (
 		<>
 			<SubHeader
@@ -22,7 +20,7 @@ const DentistProfile = () => {
 				<Row>
 					<Col
 						xs='12'
-						className='mb-5 text-center'
+						className=' text-center'
 					>
 						<h2>{intro}</h2>
 						<div className='line mb-3 mx-auto'></div>
@@ -35,41 +33,46 @@ const DentistProfile = () => {
 						<img
 							src={image}
 							alt=''
-							className='img-fluid'
+							className='img-fluid h-75 align-self-center'
 						/>
 					</Col>
 					<Col
 						xs='12'
 						lg='6 '
 					>
-						<h3 className='mt-5 mt-lg-0'>
+						<h3 className='mt-lg-5 mt-lg-0'>
 							{title} {dentistName.split(/\s/)[0]} <i>"{nickname}" </i>
 							{dentistName.split(/\s/)[1]}
 						</h3>
 						<p className='mb-4'>{specialty}</p>
-						<h4>Education:</h4>
-						<ul className='mb-4'>
-							{education.map((item, index) => (
-								<li key={index}>
-									<i>
-										<strong>{item.split(':')[0]}:</strong>
-										{item.split(':')[1]}
-									</i>
-								</li>
-							))}
-						</ul>
+						<div
+							className='bg-primary p-5 text-white rounded-4'
+							style={{ backgroundColor: '#2c455d' }}
+						>
+							<h4>Education:</h4>
+							<ul className='mb-4'>
+								{education.map((item, index) => (
+									<li key={index}>
+										<i>
+											<strong className='me-1 text-decoration-underline'>{item.split(':')[0]}:</strong>
+											{item.split(':')[1]}
+										</i>
+									</li>
+								))}
+							</ul>
 
-						<h4>Fun Facts:</h4>
-						<ul>
-							{fun.map((item, index) => (
-								<li key={index}>
-									<i>
-										<strong>{item.split(':')[0]}:</strong>
-										{item.split(':')[1]}
-									</i>
-								</li>
-							))}
-						</ul>
+							<h4>Fun Facts:</h4>
+							<ul>
+								{fun.map((item, index) => (
+									<li key={index}>
+										<i>
+											<strong className='me-1 text-decoration-underline'>{item.split(':')[0]}:</strong>
+											{item.split(':')[1]}
+										</i>
+									</li>
+								))}
+							</ul>
+						</div>
 					</Col>
 				</Row>
 			</Container>

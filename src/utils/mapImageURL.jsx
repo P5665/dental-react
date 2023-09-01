@@ -1,10 +1,21 @@
 import { baseUrl } from '../shared/baseUrl';
-export const mapImageURL = (arr) => {
-	console.log(arr);
-	return arr.map((item) => {
+export const mapImageURL = (data) => {
+	if (Array.isArray(data)) {
+		return data.map((item) => {
+			return {
+				...item,
+				image: baseUrl + item.image,
+			};
+		});
+	}
+	return Object.keys(data).reduce((result, key) => {
+		const item = data[key];
 		return {
-			...item,
-			image: baseUrl + item.image,
+			...result,
+			[key]: {
+				...item,
+				image: baseUrl + item.image,
+			},
 		};
-	});
+	}, {});
 };

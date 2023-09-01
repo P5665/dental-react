@@ -60,7 +60,7 @@ const DentistsSummary = () => {
 			</div>
 			<Container className='section'>
 				<Row>
-					<Col className=''>
+					<Col md='8 offset-md-2'>
 						<h2 className='text-center'>Explore Our Dentist Profiles</h2>
 						<div className='line mb-3 mx-auto'></div>
 						<p>On this page, you'll find a collection of dentist profiles. Each profile provides valuable information about our dentists, making it easier for you to choose the right fit for your dental care.</p>
@@ -70,7 +70,7 @@ const DentistsSummary = () => {
 			<div className='bg-light section'>
 				<Container>
 					<Row>
-						<Col>
+						<Col md='10 offset-md-1'>
 							<h2 className='text-center'>Dentist Cards/Profiles</h2>
 							<div className='line mb-3 mx-auto'></div>
 							<p>Our dentist profiles are designed to give you a glimpse into the expertise and personality of each dentist. For every dentist, you'll find:</p>
