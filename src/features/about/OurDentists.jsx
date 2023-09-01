@@ -1,16 +1,19 @@
 import { Container, Row, Col } from 'reactstrap';
 import { dentistList } from '../../constants';
+import { Link } from 'react-router-dom';
 
-const OurDentists = () => {
+const OurDentists = ({ heading, colorBackground }) => {
 	const dentists = dentistList;
 	return (
-		<section className='section'>
+		<section className={`${heading ? 'section' : 'mt-5'}`}>
 			<Container>
 				<Row>
-					<Col xs='12'>
-						<h2 className='section-heading text-gray text-center'>Our Dentists</h2>
-						<div className='line mx-auto mb-5'></div>
-					</Col>
+					{heading && (
+						<Col xs='12'>
+							<h2 className='section-heading text-gray text-center'>Our Dentists</h2>
+							<div className='line mx-auto mb-5'></div>
+						</Col>
+					)}
 					{dentists.map((dentist, index) => (
 						<Col
 							key={index}
@@ -20,17 +23,20 @@ const OurDentists = () => {
 							sm={`6 ${dentists.length - 1 === index && dentist.id % 2 !== 0 ? ' offset-sm-3 ' : ' offset-sm-0'}`}
 							md='4 offset-md-0'
 						>
-							<div className='position-relative d-inline-flex overflow-hidden'>
+							<Link
+								to={'/dentists/' + dentist.name.replace(/\s/, '-').toLowerCase()}
+								className='position-relative d-inline-flex overflow-hidden'
+							>
 								<img
 									src={dentist.image}
 									alt=''
-									className='img-fluid bg-light h-auto'
+									className={`${colorBackground ? colorBackground : 'bg-light'} img-fluid h-auto`}
 								/>
 								<div className='footer-image-overlay d-flex flex-column align-items-center justify-content-center py-2 py-md-3'>
 									<h5 className='hs-5 text-white mb-1 fw-semibold'>{dentist.name}</h5>
 									<p className='display-4 text-white  mb-0'>{dentist.expertise}</p>
 								</div>
-							</div>
+							</Link>
 						</Col>
 					))}
 				</Row>

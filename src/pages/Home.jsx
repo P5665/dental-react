@@ -16,7 +16,7 @@ const Home = () => {
 			<ServicesSummary />
 			<PricingSummary />
 			<AppointmentForm />
-			<OurDentists />
+			<OurDentists heading={true} />
 			<Reviews />
 			<NewsSummary />
 		</>
