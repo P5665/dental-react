@@ -13,6 +13,7 @@ const Policy = () => {
 				current='Policy'
 				image={subHeaderImage}
 			/>
+			{/* Transform this and legal into a component */}
 			<Container>
 				<Row className='my-5'>
 					{legalDocByType.map((doc, index) => (
