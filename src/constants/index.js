@@ -12,6 +12,10 @@ export const navLinks = [
 				title: 'Services',
 				dropdown: [
 					{
+						id: '',
+						title: 'Services',
+					},
+					{
 						id: 'general',
 						title: 'General',
 					},
@@ -51,10 +55,10 @@ export const navLinks = [
 					},
 				],
 			},
-			{
-				id: 'dental-technology',
-				title: 'Dental Technology',
-			},
+			// {
+			// 	id: 'dental-technology',
+			// 	title: 'Dental Technology',
+			// },
 		],
 	},
 

@@ -14,7 +14,11 @@ const Home = () => {
 			<Hero />
 			<AboutSummary />
 			<ServicesSummary />
-			<PricingSummary />
+			<PricingSummary
+				limit={5}
+				header={true}
+				button={true}
+			/>
 			<AppointmentForm />
 			<OurDentists heading={true} />
 			<Reviews />
