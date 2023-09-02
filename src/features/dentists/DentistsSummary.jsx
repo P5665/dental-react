@@ -1,9 +1,7 @@
 import { useSelector } from 'react-redux';
-import { useParams } from 'react-router-dom';
 import { selectAllDentists, selectDentistByName } from './dentistsSlice';
 import { Container, Row, Col, Button } from 'reactstrap';
 import { Link } from 'react-router-dom';
-import Dentist from './Dentist';
 import OurDentists from '../about/OurDentists';
 
 const DentistsSummary = () => {
@@ -83,11 +81,14 @@ const DentistsSummary = () => {
 						</Col>
 					</Row>
 				</Container>
-				<OurDentists colorBackground={'bg-white'} />
+				<OurDentists
+					dentistsList={dentists}
+					colorBackground={'bg-white'}
+				/>
 			</div>
 			<Container className='section'>
 				<Row>
-					<Col>
+					<Col md='8 offset-md-2'>
 						<h2 className='text-center'>Take the Next Step</h2>
 						<div className='line mb-3 mx-auto'></div>
 						<p>Are you ready to discover more about our dentists? Click on a dentist's profile that catches your eye to learn more about their background, expertise, and approach to dental care. By clicking on the profiles, you'll also find additional information about services, patient testimonials, and more.</p>

@@ -2,8 +2,8 @@ import { Container, Row, Col } from 'reactstrap';
 import { dentistList } from '../../constants';
 import { Link } from 'react-router-dom';
 
-const OurDentists = ({ heading, colorBackground }) => {
-	const dentists = dentistList;
+const OurDentists = ({ dentistsList, heading, colorBackground }) => {
+	const dentistsArray = dentistsList ? dentistsList : dentistList; // Use json if exists otherwise use local
 	return (
 		<section className={`${heading ? 'section' : 'mt-5'}`}>
 			<Container>
@@ -14,13 +14,13 @@ const OurDentists = ({ heading, colorBackground }) => {
 							<div className='line mx-auto mb-5'></div>
 						</Col>
 					)}
-					{dentists.map((dentist, index) => (
+					{dentistsArray.map((dentist, index) => (
 						<Col
 							key={index}
 							className={`mb-4 px-3`}
 							xs='8 offset-2'
 							// Center last odd dentist
-							sm={`6 ${dentists.length - 1 === index && dentist.id % 2 !== 0 ? ' offset-sm-3 ' : ' offset-sm-0'}`}
+							sm={`6 ${dentistsArray.length - 1 === index && dentist.id % 2 !== 0 ? ' offset-sm-3 ' : ' offset-sm-0'}`}
 							md='4 offset-md-0'
 						>
 							<Link

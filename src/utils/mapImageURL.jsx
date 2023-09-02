@@ -1,4 +1,5 @@
 import { baseUrl } from '../shared/baseUrl';
+
 export const mapImageURL = (data) => {
 	if (Array.isArray(data)) {
 		return data.map((item) => {

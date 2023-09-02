@@ -10,6 +10,7 @@ import ServicesList from './features/services/ServicesList';
 import { fetchServices } from './features/services/servicesSlice';
 import { fetchDentists } from './features/dentists/dentistsSlice';
 import { fetchLegal } from './features/legal/legalSlice';
+import { fetchFaq, computeUniqueCategories } from './features/faq/faqSlice';
 
 function App() {
 	const dispatch = useDispatch();
@@ -18,6 +19,8 @@ function App() {
 		dispatch(fetchServices());
 		dispatch(fetchDentists());
 		dispatch(fetchLegal());
+		dispatch(fetchFaq());
+		dispatch(computeUniqueCategories());
 	}, [dispatch]);
 
 	return (

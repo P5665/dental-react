@@ -41,6 +41,5 @@ const legalSlice = createSlice({
 export const legalReducer = legalSlice.reducer;
 
 export const selectLegalByType = (type) => (state) => {
-	console.log('🚀 ~ file: legalSlice.jsx:44 ~ selectLegalByType ~ type:', type);
 	return state.legal.legalArray.filter((content) => content.type.toLowerCase() === type);
 };

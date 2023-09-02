@@ -46,7 +46,7 @@ const DentistProfile = () => {
 						</h3>
 						<p className='mb-4'>{specialty}</p>
 						<div
-							className='bg-primary p-5 text-white rounded-4'
+							className='p-5 text-white rounded-4'
 							style={{ backgroundColor: '#2c455d' }}
 						>
 							<h4>Education:</h4>
