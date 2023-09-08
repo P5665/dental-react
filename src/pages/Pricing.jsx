@@ -16,14 +16,6 @@ const Pricing = () => {
 						<p>At our dental practice, we believe that everyone deserves access to high-quality dental care. Our transparent and competitive pricing ensures that you receive exceptional dental services without hidden fees or surprises. Explore our pricing options below:</p>
 					</Col>
 				</Row>
-				<Row>
-					<Col>
-						<h2 className='section-heading text-center'></h2>
-					</Col>
-					<Col></Col>
-					<Col></Col>
-					<Col></Col>
-				</Row>
 			</Container>
 			<div className='pb-5'>
 				<GenericServicesList />
