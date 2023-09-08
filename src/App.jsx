@@ -20,7 +20,7 @@ function App() {
 		dispatch(fetchDentists());
 		dispatch(fetchLegal());
 		dispatch(fetchFaq());
-		dispatch(computeUniqueCategories());
+		dispatch(computeUniqueCategories()); // Probably need to set this up like addContact in a way and just do in faq file
 	}, [dispatch]);
 
 	return (
