@@ -1,7 +1,7 @@
 import SubHeader from '../components/SubHeader';
 import subHeaderImage from '../assets/bg-img/12.jpg';
 import { Container, Row, Col } from 'reactstrap';
-import PricingSummary from '../features/services/PricingSummary';
+import GenericServicesList from '../features/services/GenericServicesList';
 
 const Pricing = () => {
 	return (
@@ -25,7 +25,7 @@ const Pricing = () => {
 					<Col></Col>
 				</Row>
 			</Container>
-			<PricingSummary />
+			<GenericServicesList />
 			<Container className='section pt-3'>
 				<Row>
 					<Col

@@ -99,12 +99,7 @@ const DentistsSummary = () => {
 						className='text-center mt-5'
 					>
 						<Link to='/#book-appointment-form'>
-							<Button
-								color='primary'
-								className='me-3'
-							>
-								book appointment
-							</Button>
+							<Button color='primary'>book appointment</Button>
 						</Link>
 					</Col>
 				</Row>
