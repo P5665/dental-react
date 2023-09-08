@@ -17,12 +17,12 @@ const ServicesList = () => {
 				current={category}
 				image={subHeaderImage}
 			/>
-			<Container>
+			<Container className='pt-3 pb-5 py-md-5'>
 				{categoryList.map((service, index) => (
 					<>
 						<Service
 							service={service}
-							order={index % 2 === 0 ? 'order-first' : 'order-first order-md-last'}
+							order={index % 2 === 0 ? 'order-first' : 'order-first order-lg-last'}
 						/>
 						<Row className={`${categoryList.length - 1 === index ? 'd-none' : ''}`}>
 							<Col xs='10 offset-1'>

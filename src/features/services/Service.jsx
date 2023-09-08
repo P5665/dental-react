@@ -5,19 +5,18 @@ import { contactInfo } from '../../constants';
 const Service = ({ service: { service, header, image, description, inclusions }, order }) => {
 	const { phone } = contactInfo.phoneInfo;
 	return (
-		<Row>
+		<Row className='service'>
 			<Col>
 				<div className='shadow my-5'>
 					<Row>
 						<Col
 							xs='12'
 							md='6'
-							className={`${order} d-flex justify-content-center align-items-center`}
+							className={`${order} d-flex justify-content-center align-items-center card-img-wrapper `}
 						>
 							<img
 								src={image}
 								alt=''
-								className='img-fluid  object-fit-contain'
 							/>
 						</Col>
 						<Col
