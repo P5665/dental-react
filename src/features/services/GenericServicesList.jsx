@@ -36,7 +36,7 @@ const GenericServicesList = ({ limit, isSummary }) => {
 						className='text-center mt-5'
 					>
 						<Link to='/pricing'>
-							<Button color='primary'>book appointment</Button>
+							<Button color='primary'>Read More &gt; &gt;</Button>
 						</Link>
 					</Col>
 				</Row>
