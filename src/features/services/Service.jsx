@@ -1,6 +1,7 @@
 import { Row, Col, Button } from 'reactstrap';
 import { Link } from 'react-router-dom';
 import { contactInfo } from '../../constants';
+import PrimaryNavButton from '../../components/PrimaryNavButton';
 
 const Service = ({ service: { service, header, image, description, inclusions }, order }) => {
 	const { phone } = contactInfo.phoneInfo;
@@ -38,21 +39,15 @@ const Service = ({ service: { service, header, image, description, inclusions },
 								))}
 							</ul>
 							<div className='d-lg-flex align-items-center'>
-								<Link to='/#book-appointment-form'>
-									<Button
-										color='primary'
-										className='me-3'
-									>
-										book now
-									</Button>
-								</Link>
+								<PrimaryNavButton
+									buttonText='book now'
+									buttonStyles='me-3'
+								/>
 								<a href={`tel:${phone}`}>
-									<Button
-										color='primary'
-										className=''
-									>
-										Call now
-									</Button>
+									<PrimaryNavButton
+										buttonText='Call now'
+										noLink
+									/>
 								</a>
 							</div>
 						</Col>

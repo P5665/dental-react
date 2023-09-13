@@ -3,6 +3,7 @@ import { Collapse, Navbar, NavbarToggler, NavbarBrand, Nav, NavItem, Button, Unc
 import { navLinks } from '../constants/index';
 import { NavLink } from 'react-router-dom';
 import DentoLogo from '../assets/core-img/logo.png';
+import PrimaryNavButton from './PrimaryNavButton';
 
 function NavBar() {
 	const [isOpen, setIsOpen] = useState(false);
@@ -115,7 +116,7 @@ function NavBar() {
 						)
 					)}
 				</Nav>
-				<Button color='primary'>Booking Now</Button>
+				<PrimaryNavButton buttonText='booking now' />
 			</Collapse>
 		</Navbar>
 	);

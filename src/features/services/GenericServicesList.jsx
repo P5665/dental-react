@@ -3,6 +3,7 @@ import { priceSummary } from '../../constants';
 import { Link } from 'react-router-dom';
 import GenericServicesListHeader from './GenericServicesListHeader';
 import GenericServicesListItem from './GenericServicesListItem';
+import PrimaryNavButton from '../../components/PrimaryNavButton';
 
 const GenericServicesList = ({ limit, isSummary }) => {
 	console.log('🚀 ~ file: GenericServicesList.jsx:8 ~ GenericServicesList ~ isSummary:', isSummary);
@@ -35,9 +36,10 @@ const GenericServicesList = ({ limit, isSummary }) => {
 						xs='12'
 						className='text-center mt-5'
 					>
-						<Link to='/pricing'>
-							<Button color='primary'>Read More &gt; &gt;</Button>
-						</Link>
+						<PrimaryNavButton
+							url='/pricing'
+							buttonText='Read more &gt; &gt;'
+						/>
 					</Col>
 				</Row>
 			</Container>

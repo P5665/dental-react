@@ -5,6 +5,7 @@ import { useSelector } from 'react-redux';
 import { useParams } from 'react-router-dom';
 import { selectDentistByName } from './dentistsSlice';
 import { Link } from 'react-router-dom';
+import PrimaryNavButton from '../../components/PrimaryNavButton';
 
 const DentistProfile = () => {
 	const { name } = useParams();
@@ -106,14 +107,7 @@ const DentistProfile = () => {
 						xs='12'
 						className='text-center mt-5'
 					>
-						<Link to='/#book-appointment-form'>
-							<Button
-								color='primary'
-								className=''
-							>
-								book appointment
-							</Button>
-						</Link>
+						<PrimaryNavButton />
 					</Col>
 				</Row>
 			</Container>

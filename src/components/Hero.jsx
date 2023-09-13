@@ -3,6 +3,7 @@ import { heroImages } from '../constants';
 import { useState } from 'react';
 import { motion } from 'framer-motion';
 import FadeInText from '../animations/FadeInText';
+import PrimaryNavButton from './PrimaryNavButton';
 
 function Hero(args) {
 	const [activeIndex, setActiveIndex] = useState(0);
@@ -46,18 +47,16 @@ function Hero(args) {
 								<h1 className='mb-4 display-1 fw-semibold'>{item.slideHeader}</h1>
 								<p className='fs-5'>{item.slideBody}</p>
 								<div className='mt-5 d-flex justify-content-center align-items-center'>
-									<Button
-										className='me-3 bg-opacity-100'
-										color='primary'
-									>
-										Get Started
-									</Button>
-									<Button
-										color='primary'
-										outline={true}
-									>
-										Contact Us
-									</Button>
+									<PrimaryNavButton
+										buttonText='get started'
+										buttonStyles='me-3 bg-opacity-100'
+									/>
+									<PrimaryNavButton
+										buttonText='contact us'
+										buttonStyles='btn-outline-primary'
+										outline
+										url='/contact'
+									/>
 								</div>
 							</FadeInText>
 						)}
