@@ -2,6 +2,7 @@ import SubHeader from '../components/SubHeader';
 import subHeaderImage from '../assets/bg-img/12.jpg';
 import { Container, Row, Col, Button } from 'reactstrap';
 import { Link } from 'react-router-dom';
+import PrimaryNavButton from '../components/PrimaryNavButton';
 
 // Not sure if I want this to be a stand alone page.  I did add it to the footer per template.  Would need and Idea for content and layout.  Could be pretty basic with perhaps a full list of services and the other pages are highlighted services????
 const Services = () => {
@@ -46,12 +47,12 @@ const Services = () => {
 								<li className='mb-3 lh-3'>X-Rays: Comprehensive imaging to aid in diagnosis and treatment planning.</li>
 								<li className='mb-3 lh-3'>Oral Hygiene Education: Guidance on maintaining excellent oral health at home.</li>
 							</ul>
-							<Link
-								to={'/services/general'}
-								className='mt-auto'
-							>
-								<Button color='primary'>Learn More</Button>
-							</Link>
+							<div className='mt-auto'>
+								<PrimaryNavButton
+									url='/services/general'
+									buttonText='Learn more'
+								/>
+							</div>
 						</Col>
 						<Col
 							xs='12'
@@ -68,12 +69,12 @@ const Services = () => {
 								<li className='mb-3 lh-3'>Oral Surgery: Procedures such as wisdom teeth removal and oral pathology management.</li>
 								<li className='mb-3 lh-3'>Root Canal Therapy: Precise and effective treatment for damaged tooth pulp.</li>
 							</ul>
-							<Link
-								to={'/services/surgical'}
-								className='mt-auto'
-							>
-								<Button color='primary'>Learn More</Button>
-							</Link>
+							<div className='mt-auto'>
+								<PrimaryNavButton
+									url='/services/surgical'
+									buttonText='Learn more'
+								/>
+							</div>
 						</Col>
 						<Col
 							xs='12'
@@ -90,12 +91,12 @@ const Services = () => {
 								<li className='mb-3 lh-3'>Invisalign®: Clear aligners for discreet orthodontic correction.</li>
 								<li className='mb-3 lh-3'>Cosmetic Bonding: Repair minor imperfections and enhance the appearance of your teeth.</li>
 							</ul>
-							<Link
-								to={'/services/cosmetic'}
-								className='mt-auto'
-							>
-								<Button color='primary'>Learn More</Button>
-							</Link>
+							<div className='mt-auto'>
+								<PrimaryNavButton
+									url='/services/cosmetic'
+									buttonText='Learn more'
+								/>
+							</div>
 						</Col>
 					</Row>
 				</Container>
@@ -118,12 +119,9 @@ const Services = () => {
 						<div className='line mb-5 mx-auto'></div>
 						<p>No matter your dental needs, we are committed to providing exceptional care and achieving outstanding results. Our team is dedicated to helping you achieve and maintain a healthy, beautiful smile that you can confidently share with the world.</p>
 						<p>Ready to embark on your journey to optimal oral health? Schedule a consultation with us today, and let's work together to create your perfect smile.</p>
-						<Link
-							to={'/#appointment-form'}
-							className='text-center d-block mt-4'
-						>
-							<Button color='primary'>Book Appointment</Button>
-						</Link>
+						<div className='text-center mt-5'>
+							<PrimaryNavButton />
+						</div>
 					</Col>
 				</Row>
 			</Container>

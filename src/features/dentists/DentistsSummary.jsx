@@ -3,6 +3,7 @@ import { selectAllDentists, selectDentistByName } from './dentistsSlice';
 import { Container, Row, Col, Button } from 'reactstrap';
 import { Link } from 'react-router-dom';
 import OurDentists from '../about/OurDentists';
+import PrimaryNavButton from '../../components/PrimaryNavButton';
 
 const DentistsSummary = () => {
 	const dentists = useSelector(selectAllDentists);
@@ -98,9 +99,7 @@ const DentistsSummary = () => {
 						xs='12'
 						className='text-center mt-5'
 					>
-						<Link to='/#book-appointment-form'>
-							<Button color='primary'>book appointment</Button>
-						</Link>
+						<PrimaryNavButton />
 					</Col>
 				</Row>
 			</Container>
