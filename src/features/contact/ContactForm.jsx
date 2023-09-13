@@ -1,4 +1,4 @@
-import { Button, Label, Col, FormGroup } from 'reactstrap';
+import { Button, Label, Row, Col, FormGroup } from 'reactstrap';
 import { Formik, Field, Form, ErrorMessage } from 'formik';
 import * as Yup from 'yup';
 import { postContact } from './contactsSlice';
@@ -17,7 +17,7 @@ const ContactForm = () => {
 	});
 
 	const handleSubmit = (values, { setSubmitting, resetForm }) => {
-		// Handle form submission here
+		// Handle form submission here, building body for PUT
 		const contact = {
 			name: values.name,
 			email: values.email,
@@ -46,43 +46,45 @@ const ContactForm = () => {
 				validationSchema={validationSchema}
 				onSubmit={handleSubmit}
 			>
-				{({ values, touched, errors, dirty, isSubmitting, handleChange, handleBlur, handleSubmit, handleReset }) => (
+				{({ touched, errors, dirty, isSubmitting }) => (
 					<Form>
-						{dirty}
 						{/* Wrap all form elements inside a single parent <Form> element */}
-						<FormGroup row>
+						<Row>
 							<Col
 								lg='6'
-								className='mb-4 mb-lg-0'
+								className='mb-4'
 							>
 								<Field
-									className='form-control rounded-0'
+									className={`${(errors.name && touched.name) || (errors.name && dirty.name) ? 'border-danger border-1' : ''} form-control rounded-0`}
 									name='name'
 									placeholder='Your Name'
 								/>
 								<ErrorMessage
 									name='name'
-									component='p'
+									component='div'
 									className='text-danger ps-1 pt-1'
 								/>
 							</Col>
-							<Col lg='6'>
+							<Col
+								lg='6'
+								className='mb-4'
+							>
 								<Field
-									className='form-control rounded-0'
+									className={`${(errors.email && touched.email) || (errors.email && dirty.email) ? 'border-danger border-1' : ''} form-control rounded-0`}
 									name='email'
 									placeholder='Your Email'
 								/>
 								<ErrorMessage
 									name='email'
-									component='p'
+									component='div'
 									className='text-danger ps-1 pt-1'
 								/>
 							</Col>
-						</FormGroup>
-						<FormGroup row>
+						</Row>
+						<Row>
 							<Col>
 								<Field
-									className='form-control'
+									className={`${(errors.message && touched.message) || (errors.message && dirty.message) ? 'border-danger border-1' : ''} form-control rounded-0`}
 									name='message'
 									as='textarea'
 									placeholder='Your Message'
@@ -90,11 +92,11 @@ const ContactForm = () => {
 								/>
 								<ErrorMessage
 									name='message'
-									component='p'
+									component='div'
 									className='text-danger ps-1 pt-1'
 								/>
 							</Col>
-						</FormGroup>
+						</Row>
 						{/* Add other form fields here */}
 						<Button
 							color='primary'
