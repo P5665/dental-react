@@ -1,7 +1,12 @@
 import { Container, Row, Col, FormGroup, Button, Label, Input } from 'reactstrap';
 import { Formik, Field, Form, ErrorMessage } from 'formik';
+import * as Yup from 'yup';
+import { postAppointment } from './appointmentsSlice';
+import { useDispatch } from 'react-redux';
 
 const AppointmentForm = () => {
+	const dispatch = useDispatch();
+
 	return (
 		<section className='appointment-form section overlay'>
 			<Container>
@@ -9,7 +14,16 @@ const AppointmentForm = () => {
 					<Col>
 						<h2 className='section-heading text-white text-center'>Book An Appointment</h2>
 						<div className='line mb-5 mx-auto'></div>
-						<Formik>
+						<Formik
+							initialValues={{
+								name: '',
+								phone: '',
+								email: '',
+								address: '',
+								zip: '',
+								message: '',
+							}}
+						>
 							<Form id='book-appointment-form'>
 								<Row>
 									<Col md='6'>
@@ -17,14 +31,11 @@ const AppointmentForm = () => {
 											<Field
 												type='text'
 												name='name'
-												className='form-control rounded-0 '
+												className='form-control rounded-0'
 												placeholder='Your Name'
 											/>
-											<Label
-												htmlFor='name'
-												className='text-white '
-											>
-												Name
+											<Label htmlFor='name'>
+												<i className='text-capitalize'>name</i>
 											</Label>
 											<ErrorMessage
 												name='name'
@@ -39,9 +50,12 @@ const AppointmentForm = () => {
 												type='tel'
 												name='phone'
 												pattern='[0-9]{3}-[0-9]{2}-[0-9]{3}'
-												className='form-control rounded-0 text-white bg-dark-gray opacity-50 border-0 mb-2'
+												className='form-control rounded-0'
 												placeholder='Your Phone'
 											/>
+											<Label htmlFor='phone'>
+												<i className='text-capitalize'>phone</i>
+											</Label>
 											<ErrorMessage
 												name='phone'
 												component='div'
@@ -50,101 +64,137 @@ const AppointmentForm = () => {
 										</FormGroup>
 									</Col>
 								</Row>
-								<FormGroup
-									floating
-									row
-								>
+								<Row>
 									<Col md='6'>
-										<Field
-											type='email'
-											name='email'
-											className='form-control rounded-0 text-white bg-dark-gray opacity-50 border-0 mb-2'
-											placeholder='Your Email'
-										/>
-										<ErrorMessage
-											name='email'
-											component='div'
-											className='text-danger'
-										/>
+										<FormGroup floating>
+											<Field
+												type='email'
+												name='email'
+												className='form-control rounded-0'
+												placeholder='Your Email'
+											/>
+											<Label htmlFor='email'>
+												<i className='text-capitalize'>email</i>
+											</Label>
+											<ErrorMessage
+												name='email'
+												component='div'
+												className='text-danger'
+											/>
+										</FormGroup>
 									</Col>
 									<Col
 										xs='8'
 										md='4'
 									>
-										<Field
-											name='address'
-											className='form-control rounded-0 text-white bg-dark-gray opacity-50 border-0 mb-2'
-											placeholder='Your Address'
-										/>
-										<ErrorMessage
-											name='address'
-											component='div'
-											className='text-danger'
-										/>
+										<FormGroup floating>
+											<Field
+												name='address'
+												className='form-control rounded-0'
+												placeholder='Your Address'
+											/>
+											<Label htmlFor='address'>
+												<i className='text-capitalize'>address</i>
+											</Label>
+											<ErrorMessage
+												name='address'
+												component='div'
+												className='text-danger'
+											/>
+										</FormGroup>
 									</Col>
 									<Col
 										xs='4'
 										md='2'
 									>
-										<Field
-											name='zip'
-											className='form-control rounded-0 text-white bg-dark-gray opacity-50 border-0 mb-2'
-											placeholder='Zip'
-										/>
-										<ErrorMessage
-											name='zip'
-											component='div'
-											className='text-danger'
-										/>
+										<FormGroup floating>
+											<Field
+												name='zip'
+												className='form-control rounded-0'
+												placeholder='Zip'
+											/>
+											<Label htmlFor='zip'>
+												<i className='text-capitalize'>zip</i>
+											</Label>
+											<ErrorMessage
+												name='zip'
+												component='div'
+												className='text-danger'
+											/>
+										</FormGroup>
 									</Col>
-								</FormGroup>
-								<FormGroup row>
+								</Row>
+								<Row>
 									<Col md='6'>
-										<Field
-											type='text'
-											name='name'
-											className='form-control rounded-0 text-white bg-dark-gray opacity-50 border-0 mb-2'
-											placeholder='Your Name'
-										/>
-										<ErrorMessage
-											name='name'
-											component='div'
-											className='text-danger'
-										/>
+										<FormGroup floating>
+											<Field
+												name='schedule1'
+												as='select'
+												className='form-control'
+											>
+												<option value=' '>First preferred...</option>
+												<option value='1'>1</option>
+												<option value='2'>2</option>
+												<option value='3'>3</option>
+												<option value='4'>4</option>
+												<option value='5'>5</option>
+											</Field>
+											<Label htmlFor='schedule1'>
+												<i className='text-capitalize'>choose your schedule</i>
+											</Label>
+											<ErrorMessage
+												name='schedule1'
+												component='div'
+												className='text-danger'
+											/>
+										</FormGroup>
 									</Col>
 									<Col md='6'>
-										<Field
-											type='tel'
-											name='phone'
-											pattern='[0-9]{3}-[0-9]{2}-[0-9]{3}'
-											className='form-control rounded-0 text-white bg-dark-gray opacity-50 border-0 mb-2'
-											placeholder='Your Phone'
-										/>
-										<ErrorMessage
-											name='phone'
-											component='div'
-											className='text-danger'
-										/>
+										<FormGroup floating>
+											<Field
+												name='schedule2'
+												as='select'
+												className='form-control'
+											>
+												<option value=' '>Second preferred...</option>
+												<option value='1'>1</option>
+												<option value='2'>2</option>
+												<option value='3'>3</option>
+												<option value='4'>4</option>
+												<option value='5'>5</option>
+											</Field>
+											<Label htmlFor='schedule2'>
+												<i className='text-capitalize'>choose your schedule</i>
+											</Label>
+											<ErrorMessage
+												name='schedule2'
+												component='div'
+												className='text-danger'
+											/>
+										</FormGroup>
 									</Col>
-								</FormGroup>
-								<FormGroup
-									row
-									floating
-								>
+								</Row>
+								<Row>
 									<Col>
-										<Field
-											type='text'
-											name='message'
-											className='form-control rounded-0 text-white bg-dark-gray opacity-50 border-0 mb-2'
-											placeholder='Your Message'
-										/>
-										<ErrorMessage
-											name='message'
-											component='div'
-											className='text-danger'
-										/>
+										<FormGroup floating>
+											<Field
+												as='textarea'
+												rows='12'
+												name='message'
+												className='form-control rounded-0'
+												placeholder='Your Message'
+											/>
+											<Label htmlFor='message'>
+												<i className='text-capitalize'>Message</i>
+											</Label>
+											<ErrorMessage
+												name='message'
+												component='div'
+												className='text-danger'
+											/>
+										</FormGroup>
 									</Col>
-								</FormGroup>
+								</Row>
 								<Button
 									type='submit'
 									color='primary'

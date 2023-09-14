@@ -163,9 +163,25 @@
 	border-radius: 2px;
 	border: none;
 	color: #ffffff;
-	font-size: 12px;
+	font-size: 14px;
 	padding: 0 30px;
 	font-style: italic;
+}
+
+.appointment-form textarea.form-control {
+	height: 150px;
+}
+
+.form-floating label {
+	color: gray;
+}
+
+.form-floating > .form-control:not(:placeholder-shown) ~ label,
+.form-floating > .form-control:not(:placeholder-shown) ~ label::after,
+.form-floating > .form-control:focus ~ label::after,
+.form-floating > .form-control:focus ~ label {
+	color: gray;
+	background-color: transparent;
 }
 
 /**** Reviews ****/

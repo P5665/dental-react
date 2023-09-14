@@ -5,6 +5,7 @@ import { dentistsReducer } from './features/dentists/dentistsSlice';
 import { legalReducer } from './features/legal/legalSlice';
 import { faqReducer } from './features/faq/faqSlice';
 import { contactsReducer } from './features/contact/contactsSlice';
+import { appointmentsReducer } from './features/contact/appointmentsSlice';
 
 export const store = configureStore({
 	reducer: {
@@ -13,6 +14,7 @@ export const store = configureStore({
 		legal: legalReducer,
 		faq: faqReducer,
 		contacts: contactsReducer,
+		appointments: appointmentsReducer,
 	},
 	middleware: [...getDefaultMiddleware(), logger],
 });
