@@ -34,6 +34,8 @@ const appointmentsSlice = createSlice({
 				id: state.appointmentsArray.length + 1,
 				...action.payload,
 			};
+			console.log('🚀 ~ file: appointmentsSlice.jsx:37 ~ newAppointment.action.payload:', newAppointment.action.payload);
+
 			state.appointmentsArray.push(newAppointment);
 		},
 	},
