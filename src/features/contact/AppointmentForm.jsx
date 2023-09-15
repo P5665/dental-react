@@ -199,14 +199,6 @@ const AppointmentForm = () => {
 												</FormGroup>
 											</Col>
 										</Row>
-										<FormikConsumer>
-											{(formikProps) => (
-												<div>
-													<h3>Formik Props</h3>
-													<pre>{JSON.stringify(formikProps, null, 2)}</pre>
-												</div>
-											)}
-										</FormikConsumer>
 										<Button
 											type='submit'
 											color='primary'
