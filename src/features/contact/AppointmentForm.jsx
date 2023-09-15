@@ -215,7 +215,7 @@ const AppointmentForm = () => {
 												xs='10 offset-1'
 												md='8 offset-md-2'
 											>
-												<h2 className='section-heading  text-center'>Thank You for Scheduling Your Dental Appointment!</h2>
+												<h2 className='section-heading  text-center'>Thank You, {values.name} for Scheduling Your Dental Appointment!</h2>
 												<div className='line mb-5 mx-auto'></div>
 
 												<p>We're delighted that you've chosen our dental clinic for your oral health needs. Your appointment request has been successfully submitted. Our team will review your information and get back to you shortly to confirm your appointment details.</p>
