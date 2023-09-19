@@ -2,13 +2,36 @@ import { Row, Col, Button } from 'reactstrap';
 import { Link } from 'react-router-dom';
 import { contactInfo } from '../../constants';
 import PrimaryNavButton from '../../components/PrimaryNavButton';
+import { useInView, motion } from 'framer-motion';
+import { useRef, useEffect, useState } from 'react';
 
 const Service = ({ service: { service, header, image, description, inclusions }, order }) => {
 	const { phone } = contactInfo.phoneInfo;
+	const [isDataLoaded, setIsDataLoaded] = useState(false);
+	const ref = useRef(null);
+	const isInView = useInView(ref, { once: true });
+
+	// useEffect(() => {
+	// 	console.log('🚀 ~ file: Service.jsx:15 ~ Service ~ isInView:', isInView);
+	// 	if (service) {
+	// 		setIsDataLoaded(true);
+	// 		console.log('🚀 ~ file: Service.jsx:19 ~ Service ~ isInView:', isInView);
+	// 	}
+	// }, [isInView, service]);
+
 	return (
-		<Row className='service'>
+		<Row
+			className='service'
+			ref={ref}
+		>
 			<Col>
-				<div className='shadow my-5'>
+				<motion.div
+					className='shadow my-5'
+					// initial={{ x: '100vw' }}
+					// animate={{ x: isInView ? 0 : '-100vw' }}
+					// transition={{ delay: 0.5, duration: 10 }}
+					// ref={ref}
+				>
 					<Row>
 						<Col
 							xs='12'
@@ -52,7 +75,7 @@ const Service = ({ service: { service, header, image, description, inclusions },
 							</div>
 						</Col>
 					</Row>
-				</div>
+				</motion.div>
 			</Col>
 		</Row>
 	);

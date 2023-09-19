@@ -1,5 +1,4 @@
 import { useEffect, useRef } from 'react';
-import { Progress } from 'reactstrap';
 import { motion, useInView } from 'framer-motion';
 
 const AnimatedProgressBar = ({ text, value, maxValue }) => {

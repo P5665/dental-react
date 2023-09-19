@@ -26,7 +26,6 @@ const faqSlice = createSlice({
 			// Extract categories from faqArray and make them unique using a Set
 			const categories = new Set(state.faqArray.map((faq) => faq.category));
 			state.uniqueCategories = Array.from(categories); // Convert Set to an array
-			console.log('🚀 ~ file: faqSlice.jsx:29 ~ state.uniqueCategories:', state.uniqueCategories);
 		},
 	},
 	extraReducers: {

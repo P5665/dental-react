@@ -7,10 +7,12 @@ import Error from '../../components/Error';
 import Service from './Service';
 import SubHeader from '../../components/SubHeader';
 import subHeaderImage from '../../assets/bg-img/12.jpg';
+import React from 'react';
 
 const ServicesList = () => {
 	const { category } = useParams();
 	const categoryList = useSelector(selectServicesByCategory(category));
+
 	return (
 		<>
 			<SubHeader
@@ -19,17 +21,18 @@ const ServicesList = () => {
 			/>
 			<Container className='pt-3 pb-5 py-md-5'>
 				{categoryList.map((service, index) => (
-					<>
+					<React.Fragment key={index}>
 						<Service
 							service={service}
-							order={index % 2 === 0 ? 'order-first' : 'order-first order-lg-last'}
+							order={index % 2 === 0 ? 'order-first' : 'order-first order-md-last'}
 						/>
+
 						<Row className={`${categoryList.length - 1 === index ? 'd-none' : ''}`}>
 							<Col xs='10 offset-1'>
 								<hr />
 							</Col>
 						</Row>
-					</>
+					</React.Fragment>
 				))}
 			</Container>
 		</>
