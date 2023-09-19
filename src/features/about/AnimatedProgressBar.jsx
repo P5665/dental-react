@@ -1,16 +1,12 @@
-import { useEffect } from 'react';
+import { useEffect, useRef } from 'react';
 import { Progress } from 'reactstrap';
-import { motion, useAnimation } from 'framer-motion';
+import { motion, useInView } from 'framer-motion';
 
 const AnimatedProgressBar = ({ text, value, maxValue }) => {
-	const controls = useAnimation();
+	const ref = useRef(null);
+	const isInView = useInView(ref, { once: true });
 
-	useEffect(() => {
-		controls.start({
-			width: `${(value / maxValue) * 100}%`,
-			backgroundColor: '#00aeef',
-		});
-	}, [value, maxValue, controls]);
+	useEffect(() => {}, [isInView]);
 
 	return (
 		<>
@@ -18,14 +14,22 @@ const AnimatedProgressBar = ({ text, value, maxValue }) => {
 				<div>{text}</div>
 				<div>{value}%</div>
 			</div>
-			<Progress
-				className='mb-3 rounded-0 bg-light-gray'
-				initial={{ width: '0%' }}
+
+			<div
+				className='progress mb-3 rounded-0 bg-light-gray '
+				role='progressbar'
+				aria-valuenow={value}
+				aria-valuemin='0'
+				aria-valuemax={maxValue}
 				style={{ height: '10px' }}
-				animate={controls}
-				value={value}
-				color='primary'
-			/>
+				ref={ref}
+			>
+				<motion.div
+					animate={{ width: isInView ? `${value}%` : '0%' }} // Start animation when in view.
+					transition={{ delay: 0.01, duration: 0.5 }}
+					class='progress-bar bg-primary'
+				></motion.div>
+			</div>
 		</>
 	);
 };
