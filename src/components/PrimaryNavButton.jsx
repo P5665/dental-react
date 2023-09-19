@@ -15,7 +15,7 @@ const PrimaryNavButton = ({ buttonText, buttonStyles, noLink, url, outline }) =>
 			<Button
 				className={buttonStyles ? buttonStyles : ''}
 				color='primary'
-				outline={outline ? outline : ''}
+				outline={outline ? true : false}
 			>
 				{!buttonText ? 'book appointment' : buttonText}
 			</Button>

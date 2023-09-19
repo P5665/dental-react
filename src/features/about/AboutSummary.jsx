@@ -2,6 +2,7 @@ import { Container, Row, Col, Progress } from 'reactstrap';
 import { motion, progress } from 'framer-motion';
 import AnimatedProgressBar from './AnimatedProgressBar';
 import { aboutSummary } from '../../constants';
+import AnimatedAboutSummaryStats from './AnimatedAboutSummaryStats';
 
 const AboutSummary = () => {
 	const { image, altText, bodyText, progressBars, stats } = aboutSummary;
@@ -58,9 +59,7 @@ const AboutSummary = () => {
 							md='3'
 							className='d-flex flex-column justify-content-center align-items-center mb-5 mb-md-0'
 						>
-							<i className={`${stat.icon} elegant-icon`}> </i>
-							<div className='display-2 fw-semibold text-gray mt-3 mb-2'>{stat.value}</div>
-							<div className='display-4 text-gray fw-semibold text-center'>{stat.text}</div>
+							<AnimatedAboutSummaryStats stat={stat} />
 						</Col>
 					))}
 				</Row>

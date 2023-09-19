@@ -27,7 +27,7 @@ const AnimatedProgressBar = ({ text, value, maxValue }) => {
 				<motion.div
 					animate={{ width: isInView ? `${value}%` : '0%' }} // Start animation when in view.
 					transition={{ delay: 0.01, duration: 0.5 }}
-					class='progress-bar bg-primary'
+					className='progress-bar bg-primary'
 				></motion.div>
 			</div>
 		</>
