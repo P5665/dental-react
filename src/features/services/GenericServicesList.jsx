@@ -6,10 +6,7 @@ import GenericServicesListItem from './GenericServicesListItem';
 import PrimaryNavButton from '../../components/PrimaryNavButton';
 
 const GenericServicesList = ({ limit, isSummary }) => {
-	console.log('🚀 ~ file: GenericServicesList.jsx:8 ~ GenericServicesList ~ isSummary:', isSummary);
 	const { serviceHeader, services } = priceSummary;
-	console.log('🚀 ~ file: GenericServicesList.jsx:10 ~ GenericServicesList ~ services:', services);
-
 	return (
 		<section className={`${isSummary ? 'pricing-section section' : 'py-3'}`}>
 			<Container>
